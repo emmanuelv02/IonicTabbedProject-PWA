@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Upload Image
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="text-align: center;">
+<div style="height: 87%; width: 100%; margin: 0 auto;">
+      <img [src]="selectedImage" alt="No image selected" />
+</div>
+
+  <div style="position: absolute; bottom: 0px; width: 100%">
+    <input type="text" placeholder="Name the photo" value="" id="photoName" />
+    <progress max="100" value="0" id="progress" style="width: 100%" > </progress>
+    <button ion-button round (click)="takePicture()">Take Picture</button>
+    <button ion-button round (click)="uploadPicture()" [disabled]="cantSendImage">Send Picture</button>
+  </div>
+</ion-content>
+
+
